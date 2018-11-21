@@ -674,8 +674,11 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 --iniciar coisas sozinho
-awful.util.spawn_with_shell("/home/06582025619/.config/awesome/run_once.sh parcellite") -- clipboard manager
-awful.util.spawn_with_shell("/home/06582025619/.config/awesome/run_once.sh nm-applet") -- gerenciador de conexoes
-awful.util.spawn_with_shell("/home/06582025619/.config/awesome/run_once.sh conky")
-awful.util.spawn_with_shell("/home/06582025619/.config/awesome/run_once.sh fluxgui")
+
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/multicolor/theme.lua")
+
+awful.util.spawn_with_shell(os.getenv("HOME") .. "/.config/awesome/run_once.sh parcellite") -- clipboard manager
+awful.util.spawn_with_shell(os.getenv("HOME") .. "/.config/awesome/run_once.sh nm-applet") -- gerenciador de conexoes
+awful.util.spawn_with_shell(os.getenv("HOME") .. "/.config/awesome/run_once.sh conky")
+awful.util.spawn_with_shell(os.getenv("HOME") .. "/.config/awesome/run_once.sh fluxgui")
 awful.util.spawn_with_shell("wmname LG3D") --arrumar java
